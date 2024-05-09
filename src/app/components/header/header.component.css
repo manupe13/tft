@@ -1,0 +1,73 @@
+*{
+  font-family: "Bebas Neue", sans-serif;
+}
+
+header {
+  position:absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 150px;
+  overflow: hidden;
+  background-color: #4AB7E6;
+}
+
+header > nav {
+  top:-1.25em;
+  position: absolute;
+  margin:1.25em auto;
+  width:100%;
+}
+
+header > nav ul {
+  list-style:none;
+}
+
+.logo-inicial{
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: auto;
+  height: 120px;
+}
+
+.button-despensa, .button-ingredientes, .button-recetas {
+  background: transparent;
+  position: absolute;
+  border: none;
+  color: white;
+  top: 62px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.button-despensa {
+  right: 610px;
+}
+
+.button-ingredientes {
+  right: 380px;
+}
+
+.button-recetas {
+  right: 220px;
+}
+
+.accede-cuenta{
+  background: #FFFFFF;
+  border: 3px solid #163E7A;
+  border-radius: 10px;
+  padding: 12px;
+  position: absolute;
+  color:#163E7A;
+  right: 50px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 2px;
+  text-align: center;
+  margin-top: 15px;
+}

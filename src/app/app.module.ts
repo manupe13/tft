@@ -6,6 +6,8 @@ import { AngularFireModule} from '@angular/fire/compat';
 import { environment } from "../environments/environment";
 import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -18,6 +20,8 @@ import { RouterModule } from '@angular/router';
     ],
     declarations: [
         AppComponent,
+        FooterComponent,
+        HeaderComponent,
 
           ],
   bootstrap: [
