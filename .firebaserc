@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tft1-db11c": {
+      "hosting": {
+        "tft": [
+          "tft1-db11c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tft1-db11c"
+  }
+}

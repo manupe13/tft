@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import '@angular/material/prebuilt-themes/indigo-pink.css';*/
+
+/* You can add global styles to this file, and also import other style files */
+*{
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: block;
+  margin: 0;
+}
+
+html, body {
+  min-height: 115%;
+}
+
+.btn-left-top {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: #CF9800;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid #CF9800;
+  z-index: 999;
+}
+
+#btn-left-top {
+  top: 18%;
+  left: 6%;
+}
+
+.btn-left-top:hover {
+  cursor: pointer;
+}
