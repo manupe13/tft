@@ -7,7 +7,12 @@ import { environment } from "../environments/environment";
 import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { UpdatePasswordComponent } from './pages/update-password/update-password.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -20,8 +25,13 @@ import { HeaderComponent } from './components/header/header.component';
     ],
     declarations: [
         AppComponent,
+        ForgotPasswordComponent,
         FooterComponent,
         HeaderComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent,
+        UpdatePasswordComponent,
 
           ],
   bootstrap: [
