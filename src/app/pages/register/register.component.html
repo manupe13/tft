@@ -1,1 +1,52 @@
-<p>register works!</p>
+<section>
+  <a id="btn-retroceder" mat-button class="btn-left-top" (click)="openDialog($event)"><i class="fas fa-arrow-left"></i></a>
+
+  <div class="register">
+    <h1>REGISTRATE</h1>
+    <img src="../../../assets/banner.png" class="banner">
+  </div>
+</section>
+<!--body>
+  <a id="btn-retroceder" mat-button class="btn-left-top" (click)="openDialog($event)"><i class="fas fa-arrow-left"></i></a>
+
+  <h1>Registrate</h1>
+  <img src="../../../assets/banner.png" class="banner"-->
+
+  <!--form action="/Recepcion_documentos/Recepcion_documentos.html" method="get" [formGroup]="forma">
+      <div>
+        <input type="text" name="nombre" size="30"  placeholder="{{'USER-REGISTER.PASO1.NAME' | translate}}" [(ngModel)]="user.name" formControlName="name" [ngClass]="{'campo':!nombreNoValido,'campo-mal':nombreNoValido}">
+        <small *ngIf="nombreNoValido">Ingrese su nombre</small>
+      </div>
+
+      <div>
+        <input [ngClass]="{'campo':!surnameNoValido,'campo-mal':surnameNoValido}" type="text" name="apellidos" size="60" placeholder="{{'USER-REGISTER.PASO1.SURNAMES' | translate}}" id="input-apellido" [(ngModel)]="user.surname" formControlName="surname" [class.is-invalid] = "surnameNoValido">
+        <small *ngIf="surnameNoValido">Ingrese su primer apellido</small>
+      </div>
+
+      <div>
+        <input [ngClass]="{'campo':!dniNoValido,'campo-mal':dniNoValido}" type="text" name="dni" size="30" placeholder="{{'USER-REGISTER.PASO1.ID' | translate}}" [(ngModel)]="user.dni" formControlName="dni">
+        <small *ngIf="dniNoValido">Ponga su DNI</small>
+      </div>
+
+      <div>
+        <input [ngClass]="{'campo':!dateNoValido,'campo-mal':dateNoValido}" type="date" name="fecha" [(ngModel)]="user.date" formControlName="date">
+        <small *ngIf="dateNoValido">Ponga su fecha de nacimiento</small>
+      </div>
+
+      <div>
+        <select name="pais" [ngClass]="{'campo':!countryNoValido,'campo-mal':countryNoValido}" id="pais" [(ngModel)]="user.country" formControlName="country">
+          <option selected disabled>Selecciona una opción</option>
+          <option value="{{'USER-REGISTER.PASO1.COUNTRY1' | translate}}">{{"USER-REGISTER.PASO1.COUNTRY1" | translate}}</option>
+          <option value="{{'USER-REGISTER.PASO1.COUNTRY2' | translate}}">{{"USER-REGISTER.PASO1.COUNTRY2" | translate}}</option>
+          <option value="{{'USER-REGISTER.PASO1.COUNTRY3' | translate}}">{{"USER-REGISTER.PASO1.COUNTRY3" | translate}}</option>
+          <option value="{{'USER-REGISTER.PASO1.COUNTRY4' | translate}}">{{"USER-REGISTER.PASO1.COUNTRY4" | translate}}</option>
+        </select>
+        <small *ngIf="countryNoValido">Ponga su País de origen</small>
+      </div>
+
+      <div>
+        <input [ngClass]="{'campo':!locationNoValido,'campo-mal':locationNoValido}"  type="text" name="localidad"  placeholder="{{'USER-REGISTER.PASO1.CITY' | translate}}" [(ngModel)]="user.location" formControlName="location">
+        <small *ngIf="locationNoValido">Ponga su localidad</small>
+      </div>
+  </form>
+</body-->
