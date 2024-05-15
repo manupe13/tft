@@ -1,18 +1,19 @@
 <header class="menu-superior">
-  <a class="home-button"><img src="../../../assets/logo_azul.png" alt="home" class="logo-inicial"></a>
+  <a class="home-button" href="/" routingLink><img src="../../../assets/logo_azul.png" alt="home" class="logo-inicial"></a>
   <nav>
     <ul class="lista-menu">
       <li class="mi-despensa">
-        <button class="button-despensa">MI DESPENSA</button>
+        <a href="pantry"><button class="button-despensa">MI DESPENSA</button></a>
       </li>
       <li class="ingredientes">
-        <button class="button-ingredientes">INGREDIENTES</button>
+        <a href="ingredients"><button class="button-ingredientes">INGREDIENTES</button></a>
       </li>
       <li class="recetas">
-        <button class="button-recetas">RECETAS</button>
+        <a href="recipes"><button class="button-recetas">RECETAS</button></a>
       </li>
       <li class="accede-cuenta">
-        <h3>CUENTA</h3>
+        <a href="login" class="inicio"><label>INICIAR SESION</label></a>
+        <!--label *ngIf="loggedUserId != 'null'  " (click)="goAccount()">MI CUENTA</label-->
       </li>
     </ul>
   </nav>

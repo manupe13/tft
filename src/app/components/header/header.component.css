@@ -45,15 +45,15 @@ header > nav ul {
 }
 
 .button-despensa {
-  right: 610px;
+  right: 690px;
 }
 
 .button-ingredientes {
-  right: 380px;
+  right: 460px;
 }
 
 .button-recetas {
-  right: 220px;
+  right: 300px;
 }
 
 .accede-cuenta{
@@ -64,10 +64,19 @@ header > nav ul {
   position: absolute;
   color:#163E7A;
   right: 50px;
+  top: 47px;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 2px;
+  line-height: 25px;
   text-align: center;
-  margin-top: 15px;
+}
+
+.accede-cuenta a {
+  text-decoration: none;
+  color:#163E7A;
+}
+
+.logo-inicial,.button-despensa:hover, .button-ingredientes:hover, .button-recetas:hover, .accede-cuenta:hover, .accede-cuenta label:hover{
+  cursor: pointer;
 }
