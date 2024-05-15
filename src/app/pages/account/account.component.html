@@ -1,1 +1,111 @@
-<p>account works!</p>
+<section>
+  <a id="btn-retroceder" mat-button class="btn-left-top" (click)="goBack()"><i class="fas fa-arrow-left"></i></a>
+
+  <div class="account">
+    <h1>MI PERFIL</h1>
+    <img src="../../../assets/banner.png" class="banner">
+    <div class="info">
+      <div class="info-user">
+        <div class="name">
+          <h3>NONMBRE</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="nombre">
+            <!--<label *ngIf="!editable">{{ user.nombre }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="nombre" [(ngModel)]="user.nombre">-->
+          </div>
+        </div>
+        <div class="apellido1">
+          <h3>PRIMER APELLIDO</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="apellido1">
+            <!--<label *ngIf="!editable">{{ user.apellido1 }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="apellido1" [(ngModel)]="user.apellido1">-->
+          </div>
+        </div>
+        <div class="apellido2">
+          <h3>SEGUNDO APELLIDO</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="apellido2">
+            <!--<label *ngIf="!editable">{{ user.apellido2 }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="apellido2" [(ngModel)]="user.apellido2">-->
+          </div>
+        </div>
+        <div class="user-name">
+          <h3>NOMBRE DE USUARIO</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="user-name">
+            <!--<label *ngIf="!editable">{{ user.apellido2 }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="apellido2" [(ngModel)]="user.apellido2">-->
+          </div>
+        </div>
+        <div class="date">
+          <h3>FECHA DE NACIMIENTO</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="date">
+            <!--<label *ngIf="!editable">{{ user.date }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="date" [(ngModel)]="user.date">-->
+          </div>
+        </div>
+      </div>
+      <div class="info-usuario">
+        <div class="pais">
+          <h3>PAIS</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="country">
+            <!--<label *ngIf="!editable"> {{user.country}} </label>
+            <input *ngIf="editable" type="text" name="datos" id="country" [(ngModel)]="user.country">-->
+          </div>
+        </div>
+        <div class="telefono">
+          <h3>TELEFONO</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="phone">
+            <!--<label *ngIf="!editable">{{ user.phone }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="phone" [(ngModel)]="user.phone">-->
+          </div>
+        </div>
+        <div class="email">
+          <h3>CORREO ELECTRONICO</h3>
+          <div class="data">
+            <label></label>
+            <input type="text" name="datos" id="email">
+            <!--<label *ngIf="!editable">{{ user.email }}</label>
+            <input *ngIf="editable" type="text" name="datos" id="email" [(ngModel)]="user.email">-->
+          </div>
+        </div>
+        <div class="passwd">
+          <h3>CONTRASEÑA</h3>
+          <div class="data">
+            <label></label>
+            <div class="contra">
+              <a href="update-password"><button class="update-password">CAMBIAR CONTRASEÑA</button></a>
+            </div>
+            <!--<label *ngIf="!editable">{{ userPasswd }}</label>
+            <div class="contra">
+              <button class="update-password" *ngIf="editable" [routerLink]="['/update-password']">{{ "PROFILE.UPDATE-PASSWORD-BUTTON" | translate }}</button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="botones">
+      <button class="edit-info" (click)="setEditable()">EDITAR INFORMACION</button>
+      <!--button class="edit-info" (click)="setEditable()">CANCELAR</button-->
+      <!--<button *ngIf="!editable" class="edit-info" (click)="setEditable()">EDITAR INFORMACION</button>
+      <button *ngIf="editable" class="edit-info" (click)="setEditable()">CANCELAR</button>-->
+    </div>
+
+    <button class="logout">CERRAR SESION</button>
+    <!--button class="logout" >ACTUALIZAR</button-->
+    <!--<button *ngIf="!editable" class="logout" (click)="logOut()">CERRAR SESION</button>
+    <button *ngIf="editable" class="logout" (click)="upadateData()">ACTUALIZAR</button>-->
+  </div>
+</section>

@@ -1,0 +1,92 @@
+
+.account {
+  margin-top: 11vw;
+  text-align: center;
+}
+
+.banner {
+  margin: 0 auto; /* Centra horizontalmente */
+  height: 0.2vh;
+  width: 50%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.data label {
+  display: block;
+  margin-top: 5px;
+}
+
+.data {
+  display: contents;
+  width: max-content;
+  border-color: black;
+  border-radius: 10%;
+  border-width: 10px;
+}
+
+.edit-info {
+  background: none;
+  border-radius: 60px;
+  border-color: #CF9800;
+  color: #CF9800;
+  width: max-content;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.edit-info:hover, .logout:hover, .update-password:hover {
+  cursor: pointer;
+}
+
+.edit-info {
+  margin-left: 20px;
+}
+
+.logout {
+  background: none;
+  border-radius: 60px;
+  border-color: #009ECF;
+  color: #009ECF;
+  width: max-content;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+}
+
+.info-user {
+  grid-column: 1;
+  width: fit-content;
+  margin-left: 69%;
+}
+
+.info-usuario {
+  grid-column: 2;
+  width: fit-content;
+  margin-left: 16%;
+}
+
+.data input {
+  border-radius: 10px;
+  border-color: #1468C5;
+  height: 20px;
+  width: max-content;
+}
+
+.update-password {
+  border-radius: 10px;
+  border-color: #1468C5;
+  background: none;
+  height: 20px;
+  width: max-content;
+  padding: 1px 2px;
+}
