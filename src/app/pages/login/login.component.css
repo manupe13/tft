@@ -1,5 +1,5 @@
 .login {
-  margin-top: 13vw;
+  margin-top: 11vw;
   text-align: center;
 }
 
@@ -7,6 +7,10 @@
   margin: 0 auto; /* Centra horizontalmente */
   height: 0.2vh;
   width: 50%;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 .submit {
