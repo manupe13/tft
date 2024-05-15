@@ -1,0 +1,104 @@
+.login {
+  margin-top: 13vw;
+  text-align: center;
+}
+
+.banner {
+  margin: 0 auto; /* Centra horizontalmente */
+  height: 0.2vh;
+  width: 50%;
+}
+
+.submit {
+  background: none;
+  border-radius: 10vw;
+  border-color: #CF9800;
+  color: #CF9800;
+  width: max-content;
+  font-size: 1vw;
+  font-weight: bold;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.correo, .passwd {
+  margin-top: 3%;
+  margin-left: 41vw;
+  font-weight: bold;
+  display: table-caption;
+  text-align: center; /* Centra horizontalmente */
+}
+
+.correo input, .passwd input {
+  border-radius: 2vw;
+  border-color: #1468C5;
+  margin-top: 2%;
+  width: 25em;
+
+}
+
+.registro, .recover-password {
+  margin-top: 1%;
+  font-weight: bold;
+  text-align: center; /* Centra horizontalmente */
+}
+
+.registro a, .recover-password a {
+  color: #CF9800;
+}
+
+.recover-password a:hover, .registro a:hover, #visibility:hover, .google button:hover, .texto-google:hover {
+  cursor: pointer;
+}
+
+.eye-button {
+  background: none;
+  border: none;
+  position: absolute;
+  margin-left: -3em;
+  margin-top: 0.7em;
+}
+
+.google-button {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background: none;
+  border: 0.2vw solid #1468C5;
+  border-radius: 2vw;
+  padding: 0.5% 0.5%;
+
+}
+
+.texto-google{
+  font-weight: bold;
+  font-size: 0.75vw;
+  text-align: center;
+
+}
+
+.google-button img {
+  display: inline-block;
+  margin-right: 1.75vw;
+  margin-bottom: -0.19vw;
+}
+
+.line,.line2 {
+  margin-top: 1.7%;
+  background: #1468C5;
+  height: 0.2vh;
+  width: 15%;
+  display: inline-block;
+  margin-right: 1vw;
+  text-align: center;
+}
+
+.line2 {
+  margin-left: 1.5vw;
+}
+
+.letra {
+  position: absolute;
+  font-weight: bold;
+  margin-top: 2.5vh;
+}
+

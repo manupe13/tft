@@ -1,1 +1,37 @@
-<p>login works!</p>
+<section class="login-section">
+  <a href="/" class="btn-left-top"><i class="fas fa-arrow-left"></i></a>
+
+  <div class="login">
+    <h1>INICIA SESION</h1>
+    <img src="../../../assets/banner.png" class="banner">
+    <div class="correo">
+      <label for="user-email">CORREO</label>
+      <input type="email" name="login" id="user-email"> <!--[(ngModel)]="user.email"-->
+    </div>
+    <div class="passwd">
+      <label for="user-password">CONTRASEÑA</label>
+      <input type="password" name="login" id="user-password"> <!--[(ngModel)]="user.password"-->
+      <button class="eye-button" (click)="visibilityChange()">
+        <i id="visibility" class="fa-solid fa-eye-slash fa-flip-horizontal" style="color: #162E59;"></i>
+      </button>
+    </div>
+    <button class="submit" (click)="loginUser()">INICIAR SESION</button>
+    <div class="recover-password">
+      <label><a href="/forgot-password">¿Has olvidado la contraseña?</a></label>
+    </div>
+
+    <div class="lines">
+      <hr class="line"><span class="letra">O</span><hr class="line2">
+    </div>
+
+    <div class="google">
+      <button class="google-button" (click)="loginGoogle()"><img src="assets/icons/google.png"/>
+        <label class="texto-google">INICIAR SESION CON GOOGLE</label>
+      </button>
+    </div>
+
+    <div class="registro">
+      <label>¿Aún no te has unido? <a href="/register">REGISTRATE</a></label>
+    </div>
+  </div>
+</section>
