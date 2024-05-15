@@ -36,19 +36,6 @@
   height: 1.25em;
   margin-right: 0.3125em;
 }
-.logos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.logos li {
-  margin-left: 1.25em;
-}
-
-.tw-logo, .ig-logo {
-  height: 1.5625em;
-}
 
 .footer-hide {
   animation: slide-down 0.3s ease-in-out forwards;
