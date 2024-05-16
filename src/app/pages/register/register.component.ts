@@ -12,7 +12,9 @@ import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-
 })
 export class RegisterComponent {
 
-  constructor(private navCtl:Router,private dialog: MatDialog) { }
+  editable: boolean = false;
+
+  constructor(private navCtl:Router, private router: Router, private dialog: MatDialog) { }
 
   openDialog(event: Event) {
     event.stopPropagation();
@@ -25,9 +27,35 @@ export class RegisterComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.navCtl.navigate(['login']);
+        this.navCtl.navigate(['/login']);
       }
     });
   }
+
+  /*setEditable(): void {
+    if (this.editable) {
+      this.editable = false;
+    } else {
+      this.editable = true;
+    }
+  }
+
+  goBack() {
+    if (!this.editable) {
+      this.router.navigate(['/login']);
+    } else {
+      const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+        width: '500px',
+        data: '¿Estás seguro de que quieres retroceder? Perderá los datos añadidos'
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.editable = false;
+          this.router.navigate(['/account']);
+        }
+      });
+    }
+  }*/
 
 }

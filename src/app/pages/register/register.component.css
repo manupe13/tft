@@ -13,6 +13,47 @@ h1 {
   font-size: 2rem;
 }
 
+.info {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+  margin-top: 1%;
+}
+
+.info-user {
+  grid-column: 1;
+  width: fit-content;
+  margin-left: 60%;
+}
+
+.info-usuario {
+  grid-column: 2;
+  width: fit-content;
+  margin-left: 16%;
+}
+
+.data input, .data select {
+  border-radius: 10px;
+  border-color: #1468C5;
+  height: 20px;
+  width: max-content;
+}
+
+.create {
+  background: none;
+  border-radius: 60px;
+  border-color: #CF9800;
+  color: #CF9800;
+  width: max-content;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.create:hover {
+  cursor: pointer;
+}
+
 /*body {
   margin: 0px 0px 80px 0px;
   height: 100%;

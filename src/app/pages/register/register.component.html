@@ -1,9 +1,80 @@
 <section>
+  <!--a id="btn-retroceder" mat-button class="btn-left-top" (click)="goBack()"><i class="fas fa-arrow-left"></i></a-->
   <a id="btn-retroceder" mat-button class="btn-left-top" (click)="openDialog($event)"><i class="fas fa-arrow-left"></i></a>
 
   <div class="register">
     <h1>REGISTRATE</h1>
     <img src="../../../assets/banner.png" class="banner">
+    <!--form action="/Recepcion_documentos/Recepcion_documentos.html" method="get" [formGroup]="forma"-->
+    <div class="info">
+      <div class="info-user">
+        <div class="name">
+          <h3>NONMBRE</h3>
+          <div class="data">
+            <input type="text" name="nombre" id="nombre" size="30" formControlName="name"> <!--[(ngModel)]="user.name" [ngClass]="{'campo':!nombreNoValido,'campo-mal':nombreNoValido}"-->
+            <!--small *ngIf="nombreNoValido">Ingrese su nombre</small-->
+          </div>
+        </div>
+        <div class="apellido1">
+          <h3>PRIMER APELLIDO</h3>
+          <div class="data">
+            <input type="text" name="apellido1" id="apellido1" size="30" formControlName="surname1"><!--[(ngModel)]="user.surname1" [ngClass]="{'campo':!surnameNoValido,'campo-mal':surnameNoValido}" [class.is-invalid] = "surnameNoValido"-->
+            <!---small *ngIf="surnameNoValido">Ingrese su primer apellido</small-->
+          </div>
+        </div>
+        <div class="apellido2">
+          <h3>SEGUNDO APELLIDO</h3>
+          <div class="data">
+            <input type="text" name="apellido2" id="apellido2" size="30" formControlName="surname1"><!--[(ngModel)]="user.surname2" [ngClass]="{'campo':!surnameNoValido,'campo-mal':surnameNoValido}" [class.is-invalid] = "surnameNoValido"-->
+            <!---small *ngIf="surnameNoValido">Ingrese su segundo apellido</small-->
+          </div>
+        </div>
+        <div class="date">
+          <h3>FECHA DE NACIMIENTO</h3>
+          <div class="data">
+            <input type="date" name="fecha" id="date" formControlName="date"><!--[(ngModel)]="user.date" [ngClass]="{'campo':!dateNoValido,'campo-mal':dateNoValido}"-->
+            <!--small *ngIf="dateNoValido">Ponga su fecha de nacimiento</small-->
+          </div>
+        </div>
+      </div>
+      <div class="info-usuario">
+        <div class="pais">
+          <h3>PAIS</h3>
+          <div class="data">
+            <select name="pais" id="pais" formControlName="country"><!--[(ngModel)]="user.country" [ngClass]="{'campo':!countryNoValido,'campo-mal':countryNoValido}"-->>
+              <option selected disabled>Selecciona una opción</option>
+              <option value="España">España</option>
+              <option value="Francia">Francia</option>
+              <option value="Italia">Italia</option>
+              <option value="Reino Unido">Reino Unido</option>
+            </select>
+            <!--small *ngIf="countryNoValido">Ponga su País de origen</small-->
+          </div>
+        </div>
+        <div class="telefono">
+          <h3>TELEFONO</h3>
+          <div class="data">
+            <input type="text" name="telefono" id="phone" size="30" formControlName="phone"><!--[(ngModel)]="user.phone" [ngClass]="{'campo':!phoneNoValido,'campo-mal':phoneNoValido}"-->
+            <!--small *ngIf="phoneNoValido">Debe poner un número válido</small-->
+          </div>
+        </div>
+        <div class="email">
+          <h3>CORREO ELECTRONICO</h3>
+          <div class="data">
+            <input type="text" name="correo" id="email" size="30" formControlName="email"> <!--[(ngModel)]="user.email" [ngClass]="{'campo':!emailNoValido,'campo-mal':emailNoValido}"-->
+            <!--small *ngIf="emailNoValido">Debe poner un correo adecuado</small-->
+          </div>
+        </div>
+        <div class="passwd">
+          <h3>CONTRASEÑA</h3>
+          <div class="data">
+            <input type="password" name="contraseña" id="password" size="30" formControlName="password"><!--[(ngModel)]="user.password" [ngClass]="{'campo':!passwordNoValido,'campo-mal':passwordNoValido}"-->
+            <!--small *ngIf="passwordNoValido">Al menos una letra mayuscula, una minuscula, un numero y un caracter especial<br>Y longitud minima 8</small-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="create">CREAR CUENTA</button>
   </div>
 </section>
 <!--body>
