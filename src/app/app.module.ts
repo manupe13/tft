@@ -20,6 +20,8 @@ import { PantryComponent } from './pages/pantry/pantry.component';
 import { RecipesComponent } from './pages/recipes/recipes.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { UpdatePasswordComponent } from './pages/update-password/update-password.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 @NgModule({
     imports: [
         BrowserModule,
