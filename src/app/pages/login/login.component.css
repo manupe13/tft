@@ -21,24 +21,27 @@ h1 {
   width: max-content;
   font-size: 1vw;
   font-weight: bold;
-  margin-top: 3%;
+  margin-top: 2%;
   cursor: pointer;
 }
 
-.correo, .passwd {
-  margin-top: 3%;
-  margin-left: 41vw;
-  font-weight: bold;
-  display: table-caption;
-  text-align: center; /* Centra horizontalmente */
+.email, .passwd {
+  margin-top: 2%;
 }
 
-.correo input, .passwd input {
-  border-radius: 2vw;
+.data input {
+  border-radius: 10px;
   border-color: #1468C5;
-  margin-top: 2%;
-  width: 25em;
+  height: 20px;
+  width: max-content;
+}
 
+.btn-eye {
+  background: none ;
+  border: none;
+  position: absolute;
+  right: 40.3%;
+  margin-top: 0.22%;
 }
 
 .registro, .recover-password {
@@ -55,17 +58,9 @@ h1 {
   cursor: pointer;
 }
 
-.eye-button {
-  background: none;
-  border: none;
-  position: absolute;
-  margin-left: -3em;
-  margin-top: 0.7em;
-}
-
 .google-button {
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   background: none;
   border: 0.2vw solid #1468C5;
   border-radius: 2vw;
@@ -82,7 +77,7 @@ h1 {
 
 .google-button img {
   display: inline-block;
-  margin-right: 1.75vw;
+  margin-right: 0.75vw;
   margin-bottom: -0.19vw;
 }
 
@@ -105,4 +100,3 @@ h1 {
   font-weight: bold;
   margin-top: 2.5vh;
 }
-

@@ -4,16 +4,20 @@
   <div class="login">
     <h1>INICIA SESION</h1>
     <img src="../../../assets/banner.png" class="banner">
-    <div class="correo">
-      <label for="user-email">CORREO</label>
-      <input type="email" name="login" id="user-email"> <!--[(ngModel)]="user.email"-->
+    <div class="email">
+      <label for="user-email"><h3>CORREO ELECTRONICO</h3></label>
+      <div class="data">
+        <input type="email" name="login" id="user-email" size="50"><!--[(ngModel)]="user.email"-->
+      </div>
     </div>
     <div class="passwd">
-      <label for="user-password">CONTRASEÑA</label>
-      <input type="password" name="login" id="user-password"> <!--[(ngModel)]="user.password"-->
-      <button class="eye-button" (click)="visibilityChange()">
-        <i id="visibility" class="fa-solid fa-eye-slash fa-flip-horizontal" style="color: #162E59;"></i>
-      </button>
+      <label for="user-password"><h3>CONTRASEÑA</h3></label>
+      <div class="data">
+        <input type="password" name="login" id="user-password" size="50"><!--[(ngModel)]="user.password"-->
+        <button class="btn-eye" (click)="visibilityChange()">
+          <i id="visibility" class="fa fa-eye password-icon"></i>
+        </button>
+      </div>
     </div>
     <button class="submit" (click)="loginUser()">INICIAR SESION</button>
     <div class="recover-password">

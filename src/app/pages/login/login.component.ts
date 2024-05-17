@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
+import { UserService } from '../../services/user.service';
+import { GlobalDataService } from '../../services/global-data.service';
+import { from } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-login',
@@ -19,15 +23,57 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private navCtl: Router, private dialog: MatDialog) { }
+  constructor(private userService: UserService, private globalData: GlobalDataService, private router: Router, private dialog: MatDialog, private globalDataService: GlobalDataService,  private af: AngularFirestore) { }
 
   loginUser() {
+    this.userService.loginEmail(this.user.email, this.user.password)
+    .then((userCredential) => {
+      const userId = userCredential.user?.uid;
+      if (userId) {
+        this.globalData.setLoggedUserId(userId);
+        this.updateUserRol(userId);
+      }
+      this.router.navigate(['/account']);
+    })
+    .catch(error => {
+      const err = error.message as string;
+      this.openDialog(err.replace("Firebase: ", "").replace(/\s\(.+?\)\./, ""));
+    });
+  }
 
+  loginGoogle() {
+    this.userService.loginGoogle().then(() => {
+      const uidUser = this.userService.getCurrentUserId();
+      if (uidUser) {
+        this.globalDataService.setLoggedUserId(uidUser);
+      }
+      const docRef = this.af.collection<{ email: string, nombre: string }>('usuarios').doc(uidUser).get();
+      docRef.subscribe(docSnapshot => {
+        if (docSnapshot && docSnapshot.exists) {
+          this.router.navigate(['/account']);
+        } else {
+          this.router.navigate(['/google-register']);
+        }
+      });
+    }).catch(error => {
+      const err = error.message as string;
+      this.openDialog(err.replace("Firebase: ", "").replace(/\s\(.+?\)\./, ""));
+    });
+  }
+
+  updateUserRol(id: string) {
+    this.userService.getUsuarioById(id).then(userPromise => {
+      from(userPromise).subscribe(user => {
+        if(user.rol) {
+          this.globalData.setLoggedInUserRol(user.rol);
+        }
+      })
+    });
   }
 
   visibilityChange() {
     const eyeControl = document.querySelector('#visibility');
-    const passwdField = document.querySelector('#user-password') as HTMLInputElement;
+    const passwdField = document.querySelector('#login') as HTMLInputElement;
     if (this.visiblePasswd) {
       this.visiblePasswd = false;
       eyeControl?.classList.add('fa-eye-slash');
@@ -39,10 +85,6 @@ export class LoginComponent {
       eyeControl?.classList.remove('fa-eye-slash');
       passwdField.type = 'text';
     }
-  }
-
-  loginGoogle() {
-
   }
 
   openDialog(msg: string) {
