@@ -10,6 +10,7 @@ import { AccountComponent } from './pages/account/account.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { GoogleRegisterComponent } from './components/google-register/google-register.component';
 import { GoUpArrowComponent } from './components/go-up-arrow/go-up-arrow.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -39,6 +40,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
         ConfirmDialogComponent,
         ForgotPasswordComponent,
         FooterComponent,
+        GoogleRegisterComponent,
         GoUpArrowComponent,
         HeaderComponent,
         HomeComponent,
