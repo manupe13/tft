@@ -12,7 +12,6 @@
             <h3>NONMBRE</h3>
             <div class="data">
               <input type="text" name="nombre" id="nombre" size="30" formControlName="name"> <!--[(ngModel)]="user.name" [ngClass]="{'campo':!nombreNoValido,'campo-mal':nombreNoValido}"-->
-              <small>Ingrese su nombre</small>
               <!--small *ngIf="nombreNoValido">Ingrese su nombre</small-->
             </div>
           </div>
@@ -20,7 +19,6 @@
             <h3>PRIMER APELLIDO</h3>
             <div class="data">
               <input type="text" name="apellido1" id="apellido1" size="30" formControlName="surname1"><!--[(ngModel)]="user.surname1" [ngClass]="{'campo':!surnameNoValido,'campo-mal':surnameNoValido}" [class.is-invalid] = "surnameNoValido"-->
-              <small>Ingrese su primer apellido</small>
               <!---small *ngIf="surnameNoValido">Ingrese su primer apellido</small-->
             </div>
           </div>
@@ -28,7 +26,6 @@
             <h3>SEGUNDO APELLIDO</h3>
             <div class="data">
               <input type="text" name="apellido2" id="apellido2" size="30" formControlName="surname2"><!--[(ngModel)]="user.surname2" [ngClass]="{'campo':!surnameNoValido,'campo-mal':surnameNoValido}" [class.is-invalid] = "surnameNoValido"-->
-              <small>Ingrese su segundo apellido</small>
               <!---small *ngIf="surnameNoValido">Ingrese su segundo apellido</small-->
             </div>
           </div>
@@ -36,7 +33,6 @@
             <h3>FECHA DE NACIMIENTO</h3>
             <div class="data">
               <input type="date" name="fecha" id="date" formControlName="date"><!--[(ngModel)]="user.date" [ngClass]="{'campo':!dateNoValido,'campo-mal':dateNoValido}"-->
-              <small>Ponga su fecha de nacimiento</small>
               <!--small *ngIf="dateNoValido">Ponga su fecha de nacimiento</small-->
             </div>
           </div>
@@ -52,7 +48,6 @@
                 <option value="Italia">Italia</option>
                 <option value="Reino Unido">Reino Unido</option>
               </select>
-              <small>Ponga su País de origen</small>
               <!--small *ngIf="countryNoValido">Ponga su País de origen</small-->
             </div>
           </div>
@@ -60,7 +55,6 @@
             <h3>TELEFONO</h3>
             <div class="data">
               <input type="text" name="telefono" id="phone" size="30" formControlName="phone"><!--[(ngModel)]="user.phone" [ngClass]="{'campo':!phoneNoValido,'campo-mal':phoneNoValido}"-->
-              <small>Debe poner un número válido</small>
               <!--small *ngIf="phoneNoValido">Debe poner un número válido</small-->
             </div>
           </div>
@@ -68,7 +62,6 @@
             <h3>CORREO ELECTRONICO</h3>
             <div class="data">
               <input type="text" name="correo" id="email" size="30" formControlName="email"> <!--[(ngModel)]="user.email" [ngClass]="{'campo':!emailNoValido,'campo-mal':emailNoValido}"-->
-              <small>Debe poner un correo adecuado</small>
               <!--small *ngIf="emailNoValido">Debe poner un correo adecuado</small-->
             </div>
           </div>
@@ -76,13 +69,12 @@
             <h3>CONTRASEÑA</h3>
             <div class="data">
               <input type="password" name="contraseña" id="password" size="30" formControlName="password"><!--[(ngModel)]="user.password" [ngClass]="{'campo':!passwordNoValido,'campo-mal':passwordNoValido}"-->
-              <small>Al menos una letra mayuscula, una minuscula, un numero y un caracter especial<br>Y longitud minima 8</small>
               <!--small *ngIf="passwordNoValido"></small-->
             </div>
           </div>
         </div>
       </div>
     </form>
-    <button class="create" (click)="onSubmit()">CREAR CUENTA</button><!--[ngClass]="{'submit':!forma.invalid,'submit-desactivado':forma.invalid}"-->
+    <button class="create">CREAR CUENTA</button><!--(click)="onSubmit()" [ngClass]="{'submit':!forma.invalid,'submit-desactivado':forma.invalid}"-->
   </div>
 </section>

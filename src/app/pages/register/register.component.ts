@@ -4,8 +4,6 @@ import { Router } from '@angular/router';
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../../interfaces/user';
-import { UserService } from '../../services/user.service';
-import { GlobalDataService } from '../../services/global-data.service';
 
 @Component({
   selector: 'app-register',
@@ -37,7 +35,7 @@ export class RegisterComponent {
 
   //editable: boolean = false;
 
-  constructor(private usrServ: UserService, public globalData: GlobalDataService, private navCtl:Router, private dialog: MatDialog, private fb:FormBuilder) {
+  constructor(private navCtl:Router, private dialog: MatDialog, private fb:FormBuilder) {
     this.crearFormulario();
   }
 
@@ -79,7 +77,7 @@ export class RegisterComponent {
     return this.forma.get('password')?.invalid && this.forma.get('password')?.touched;
   }
 
-  onSubmit(){
+  /*onSubmit(){
     this.usuario.nombre = this.user.name;
     this.usuario.apellido1 = this.user.surname1;
     this.usuario.apellido2 = this.user.surname2;
@@ -99,7 +97,7 @@ export class RegisterComponent {
     }).catch((err) => {
       console.error(err);
     });
-  }
+  }*/
 
   openDialog(event: Event) {
     event.stopPropagation();
