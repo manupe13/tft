@@ -3,7 +3,7 @@
   <nav>
     <ul class="lista-menu">
       <li class="mi-despensa">
-        <button class="button-despensa" [routerLink]="['/pantry']">MI DESPENSA</button>
+        <button class="button-despensa" [routerLink]="['/pantry']" *ngIf="loggedUserId != 'null'  ">MI DESPENSA</button>
       </li>
       <li class="ingredientes">
         <button class="button-ingredientes" [routerLink]="['ingredients']">INGREDIENTES</button>
@@ -12,8 +12,8 @@
         <button class="button-recetas" [routerLink]="['/recipes']" >RECETAS</button>
       </li>
       <li class="accede-cuenta">
-        <label [routerLink]="['/login']">INICIAR SESION</label>
-        <!--<label (click)="goAccount()">MI CUENTA</label>-->
+        <label [routerLink]="['/login']" *ngIf="loggedUserId == 'null' ">INICIAR SESION</label>
+        <label (click)="goAccount()" *ngIf="loggedUserId != 'null'  ">MI CUENTA</label>
       </li>
     </ul>
   </nav>
