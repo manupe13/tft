@@ -2,7 +2,7 @@ import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './pages/account/account.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-import { GoogleRegisterComponent } from './components/google-register/google-register.component';
+import { GoogleRegisterComponent } from './pages/google-register/google-register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { IngredientsComponent } from './pages/ingredients/ingredients.component';
 import { LoginComponent } from './pages/login/login.component';
