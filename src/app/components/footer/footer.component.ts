@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -12,9 +12,6 @@ export class FooterComponent {
   isFooterVisible = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
