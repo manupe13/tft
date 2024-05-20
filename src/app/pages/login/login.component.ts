@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
-import { UserService } from '../../services/user.service';
-import { GlobalDataService } from '../../services/global-data.service';
-import { from } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -23,10 +19,10 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private userService: UserService, private globalData: GlobalDataService, private router: Router, private dialog: MatDialog, private globalDataService: GlobalDataService,  private af: AngularFirestore) { }
+  constructor(private router: Router, private dialog: MatDialog) { }
 
   loginUser() {
-    this.userService.loginEmail(this.user.email, this.user.password)
+    /*this.userService.loginEmail(this.user.email, this.user.password)
     .then((userCredential) => {
       const userId = userCredential.user?.uid;
       if (userId) {
@@ -38,11 +34,11 @@ export class LoginComponent {
     .catch(error => {
       const err = error.message as string;
       this.openDialog(err.replace("Firebase: ", "").replace(/\s\(.+?\)\./, ""));
-    });
+    });*/
   }
 
   loginGoogle() {
-    this.userService.loginGoogle().then(() => {
+    /*this.userService.loginGoogle().then(() => {
       const uidUser = this.userService.getCurrentUserId();
       if (uidUser) {
         this.globalDataService.setLoggedUserId(uidUser);
@@ -58,10 +54,10 @@ export class LoginComponent {
     }).catch(error => {
       const err = error.message as string;
       this.openDialog(err.replace("Firebase: ", "").replace(/\s\(.+?\)\./, ""));
-    });
+    });*/
   }
 
-  updateUserRol(id: string) {
+  /*updateUserRol(id: string) {
     this.userService.getUsuarioById(id).then(userPromise => {
       from(userPromise).subscribe(user => {
         if(user.rol) {
@@ -69,7 +65,7 @@ export class LoginComponent {
         }
       })
     });
-  }
+  }*/
 
   visibilityChange() {
     const eyeControl = document.querySelector('#visibility');

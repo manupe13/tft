@@ -1,5 +1,5 @@
 <section>
-  <a href="/" class="btn-left-top"><i class="fas fa-arrow-left"></i></a>
+  <a class="btn-left-top" [routerLink]="['/']"><i class="fas fa-arrow-left"></i></a>
 
   <div class="login">
     <h1>INICIA SESION</h1>
@@ -21,7 +21,7 @@
     </div>
     <button class="submit" (click)="loginUser()">INICIAR SESION</button>
     <div class="recover-password">
-      <label><a href="forgot-password">¿Has olvidado la contraseña?</a></label>
+      <label><a [routerLink]="['/forgot-password']">¿Has olvidado la contraseña?</a></label>
     </div>
 
     <div class="lines">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="registro">
-      <label>¿Aún no te has unido? <a href="register">REGISTRATE</a></label>
+      <label>¿Aún no te has unido? <a [routerLink]="['/register']">REGISTRATE</a></label>
     </div>
   </div>
 </section>
