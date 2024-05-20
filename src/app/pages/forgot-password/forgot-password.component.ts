@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ResetPasswdService } from '../../services/reset-passwd.service';
 import { FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-forgot-password',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.css'
 })

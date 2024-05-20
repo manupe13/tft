@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
