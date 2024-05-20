@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 import { ResetPasswdService } from '../../services/reset-passwd.service';
@@ -7,7 +7,7 @@ import { ResetPasswdService } from '../../services/reset-passwd.service';
 @Component({
   selector: 'app-update-password',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './update-password.component.html',
   styleUrl: './update-password.component.css'
 })
